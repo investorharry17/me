@@ -141,9 +141,12 @@
 <template>
 	<div>
 		<div class="portfolio-container">
-			<div class="left">
+			<div
+			 class="left">
 				<div class="dp-skills">
-					<img class="profile-image" :src="ProfileImage">
+					<img v-motion
+				    :initial="{ opacity: 0, x: 100  }"
+				    :enter="{ opacity: 1, x: 0, scale: 1 }"  class="profile-image" :src="ProfileImage">
 					<Swiper class ="skills"
 						:modules = "[ Autoplay]"
 						:slides-per-view="3"
@@ -166,10 +169,14 @@
 					</Swiper>
 				</div>
 				<div class="details">
-					<h3 class="name">
+					<h3 v-motion
+				    :initial="{ opacity: 0, x: 100  }"
+				    :enter="{ opacity: 1, x: 0, scale: 1 }" :delay="200" class="name">
 						Ameh Harrison
 					</h3>
-					<h5 class="bio">
+					<h5 v-motion
+				    :initial="{ opacity: 0, x: 100  }"
+				    :enter="{ opacity: 1, x: 0, scale: 1 }" :delay="400" class="bio">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. ate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
@@ -178,7 +185,9 @@
 				</div>
 			</div>
 			<div class="right">
-				<div class="about-me">
+				<div  v-motion
+				    :initial="{ opacity: 0, x: 100  }"
+				    :enter="{ opacity: 1, x: 0, scale: 1 }" :delay="600" class="about-me">
 					<h2> About me </h2>
 					<div class="socials">
 						<a href="https://x.com/AmehHarrison17"  target="_blank">
@@ -213,7 +222,14 @@
 					</ul>
 					<div class="cards"> 
 						<template v-for="(card, index) in cards" :key="index">
-							<div v-if="tagIndex === card.tagIndex || tagIndex === 0" :class="['card', !card.active ? 'inactive' : '' ]"  >
+							<div
+							    v-motion
+							    :initial="{ opacity: 0, y: 20 }"
+							    :visible="{ opacity: 1, y: 0, scale: 1 }"
+							    :variants="{ custom: { scale: 2 } }"
+							    :leave = "{ opacity: 0, y: 20  }"
+							    
+							 v-if="tagIndex === card.tagIndex || tagIndex === 0" :class="['card', !card.active ? 'inactive' : '' ]"  >
 								<header> <span> {{ card.type  }} </span> </header> 
 								<div class="name">					
 									<h3 >
@@ -245,7 +261,12 @@
 				<div class="ratings">
 					<h2> Feedbacks </h2>
 					<div class="feedbacks">
-						<div class="feed">
+						<div 
+						 v-motion
+							    :initial="{ opacity: 0, y: 100 }"
+							    :visible="{ opacity: 1, y: 0, scale: 1 }"
+							    :variants="{ custom: { scale: 2 } }"
+						 class="feed">
 								<svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
 									<title>quote</title>
 									<path d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"></path>
@@ -260,7 +281,12 @@
 								</h4>
 								<h3>Person Name</h3>
 						</div>
-						<div class="feed">
+						<div
+						 v-motion
+							    :initial="{ opacity: 0, y: 100 }"
+							    :visible="{ opacity: 1, y: 0, scale: 1 }"
+							    :variants="{ custom: { scale: 2 } }"
+						 class="feed">
 								<svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
 									<title>quote</title>
 									<path d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"></path>
@@ -275,7 +301,12 @@
 								</h4>
 								<h3>Person Name</h3>
 						</div>
-						<div class="feed">
+						<div
+							 v-motion
+							    :initial="{ opacity: 0, y: 100 }"
+							    :visible="{ opacity: 1, y: 0, scale: 1 }"
+							    :variants="{ custom: { scale: 2 } }"
+							 class="feed">
 								<svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
 									<title>quote</title>
 									<path d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"></path>
