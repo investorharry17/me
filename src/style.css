@@ -1,0 +1,381 @@
+
+
+	div.left {
+		background: #93C5F9;
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+	}
+	div.dp-skills {
+		display: flex;
+		align-items: flex-end;
+		margin: 0 0 20px;
+	}
+	div.dp-skills img.profile-image {
+		height: 170px;
+		width: 170px;
+		display: block;
+		border-radius: 50%;
+		object-fit: cover;
+		box-shadow: 0px 0px 8px 12px #a9d1fa;
+	}
+	div.dp-skills .skills {
+		width: 50%;
+		align-items: center;
+		height: 95px;
+		-webkit-mask-image : linear-gradient(90deg,transparent 0,#000 20% 80%,transparent)
+	}
+	div.dp-skills .skills div.main {
+		background: #A9D1FA;
+		border-radius: 10px;
+		transition: .3s;
+		height: 60px;
+		width: 60px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-size: 15px;
+		margin-top: 15px;
+		user-select: none;
+		margin-bottom: 15px;
+	}
+	div.dp-skills .skills div.main.active {
+		height: 90px;
+		width: 90px;
+		margin-top: 0;
+		margin-bottom: 0;
+		align-self: center;
+		margin-left: -15px;
+	}	
+	div.dp-skills .skills div.main div, div.dp-skills .skills .main span {
+		opacity: 0;
+		transition: inherit;
+		color: #000;
+		font-size: 12px;
+		margin-top: 5px;
+	}
+	div.dp-skills .skills div.main.active div, div.dp-skills .skills .main.active span {
+		opacity: 1
+	}
+	div.dp-skills .skills div.main svg {
+		height: 40px;
+		display: block;
+		width: 40px
+	}
+	div.left div.details h3 {
+		font-size: 24px;
+		line-height: 32px;
+		color: #000;
+		font-weight: 800;
+	}
+	div.left div.details h5 {
+		font-size: 16px;
+		font-family: FontL, sans-serif ;
+		line-height: 24px;
+		font-weight: 800;
+		color: #000;
+		margin: 10px 0 20px;
+	}
+
+/*end*/
+
+
+
+
+
+
+ div.right {
+ 	/*padding: 15px;*/
+ 	color: #000
+ }
+  div.right .about-me {
+  }
+  div.right .about-me h2 {
+    position: sticky;
+    top: 0;
+    padding: 15px 0;
+    background: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 5%);
+  	padding: 15px;
+
+  }
+ div.right .about-me .socials {
+  	padding: 15px;
+ 	display: flex;
+ 	align-items: center;
+ 	margin: 20px 0
+ }
+ div.right .about-me .socials a {
+ 	margin-right: 5px;
+ 	padding: 14px;
+ 	width: 50px;
+ 	height: 50px;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	border: 1px solid #ebeaeb;
+ 	border-radius: 10px;
+ 	box-shadow: 0.5px 0.5px 4px rgb(0 0 0 / 3%), -0.5px -0.5px 4px rgb(0 0 0 / 3%);
+ 	background: #fffffff2;
+ }
+ div.right .about-me .socials svg {
+	height: 35px;
+	color: #000;
+ 	width: 35px; 
+ }
+ div.right .about-me h4 {
+  	padding: 15px;
+ 	font-family: FontL , sans-serif;
+ 	font-weight: 500;
+}
+div.right .portfolio {
+	margin: 20px 0
+}
+div.right .portfolio h2 {
+	padding: 0px 15px;
+}
+div.right .portfolio .tags {
+	display: flex;
+	align-items: center;
+}
+div.right .portfolio .tags {
+    margin: 20px 0;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 5%);
+
+}
+div.right .portfolio .tags li {
+	background: #ebeaeb;
+	font-family: FontL, sans-serif ;
+	font-size: 15px;
+	margin-left:  10px ;
+	padding: 8px 15px ;
+	border-radius: 5px;
+	font-weight: 600;
+ 	box-shadow: 0.5px 0.5px 4px rgb(0 0 0 / 3%), -0.5px -0.5px 4px rgb(0 0 0 / 3%);
+ 	transition: .3s;
+	cursor: pointer;
+}
+div.right .portfolio .tags li.active {
+	background: #000;
+	color: #fff;
+}
+div.right .portfolio .cards {
+	display: grid;
+	padding: 0px 15px;
+}
+div.right .portfolio .cards div.card {
+    background: hsla(0,0%,100%,.95);
+    border: 1px solid #ebeaeb;
+    border-radius: 32px; 
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 0.5px 0.5px 4px rgb(0 0 0 / 3%), -0.5px -0.5px 4px rgb(0 0 0 / 3%);
+    transition: all .4s ease-in-out;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    /*padding: 10px */
+} 
+div.right .portfolio .cards div.card.inactive {
+	filter: invert(.2) opacity(0.9) ;
+}
+div.right .portfolio .cards div.card:hover {
+    border-color: transparent;
+    box-shadow: 4px 4px 24px rgb(0 0 0 / 12%);
+    transition: all .4s ease-in-out;
+}
+div.right .portfolio .cards div.card header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 4px;
+    max-height: 74px;
+    /*background: red*/
+}
+div.right .portfolio .cards div.card header span  {
+    color: #666b60;
+    background: #f7f7f7;
+    border: 1px solid #ebeaeb;
+    border-radius: 9px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    height: 25px;
+}
+div.right .portfolio .cards div.card  div.name  {
+    margin-top: 12px;
+	padding: 0 20px 10px;
+
+}
+div.right .portfolio .cards div.card  div.name h3  {
+    word-break: break-word;
+    -webkit-line-clamp: 2;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 0;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+div.right .portfolio .cards div.card .techs  {
+	padding: 0 20px 10px ;
+}
+div.right .portfolio .cards div.card .techs span {
+	margin: 0px 10px;
+}
+div.right .portfolio .cards div.card hr { 
+	border: 1px solid #ebeaeb;
+	width: 100%;
+}
+div.right .portfolio .cards div.card .foot { 
+	padding: 15px 20px 20px ;
+	display: flex;
+	align-items: center;
+
+}
+div.right .portfolio .cards div.card .foot h4 { 
+    word-break: break-word;
+    -webkit-line-clamp: 2;
+    font-size: 15px;
+    font-family: FontL , sans-serif;
+    line-height: 26px;
+    margin-bottom: 0;
+    font-weight: 500;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+ 
+div.right .portfolio .cards div.card .foot svg { 
+    margin: 0 10px 0 20px;
+    height: 25px;
+    color: #000;
+    transition: .3s;
+    background: #ebeaeb;
+    padding: 2px 4px;
+    border-radius: 8px;
+    /*width: 65px;*/
+    display: block;
+}
+
+div.right .ratings {
+	/*padding: 0px 15px;*/
+}
+div.right .ratings h2 {
+    margin: 20px 0;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    /*padding: 15px 0;*/
+    padding: 15px;
+    background: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 5%);
+}
+.feedbacks {
+	margin: 20px 0;
+    padding: 15px;
+}
+.feedbacks .feed  {
+    padding: 38px 24px 24px;
+    margin: 10px 0;
+    position: relative;
+    background: #fdfbf9;
+    border: 1px solid #ebeaeb;
+    box-shadow: -0.5px -0.5px 4px rgb(0 0 0 / 3%), 0.5px 0.5px 4px rgb(0 0 0 / 3%);
+    border-radius: 32px;
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+    gap: 24px;
+    color: rgba(0, 0, 0, 0.88);
+    word-break: break-word;
+    line-height: 1.17;
+}
+
+.feedbacks .feed svg {
+	height: 30px;
+    color: #ebeaeb;
+    width: 30px;
+    opacity: .3;
+}
+.feedbacks .feed h4 {
+	word-break: break-word;
+	-webkit-line-clamp: 4;
+	font-size: 15px;
+	font-family: FontL , sans-serif;
+	line-height: 26px;
+	margin-bottom: 0;
+	font-weight: 500;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+}
+.feedbacks .feed h3 {
+	font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+	.portfolio-container {
+		display: flex;
+	}
+	div.left {
+		position: sticky;
+		top: 0;
+		height: 100vh;
+		width: 35%;
+	}
+	div.dp-skills {
+		flex-direction: column;
+		align-items: center;
+		height: 300px;
+		justify-content: space-between;
+	}
+	div.dp-skills .skills {
+		width: 80%;
+	}
+	div.dp-skills img.profile-image {
+		margin-left: -30px;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	div.left {
+		width: 30%;
+	}
+	div.right {
+		padding: 15px 30px
+	}
+	div.dp-skills {
+		height: 320px;
+	}
+	div.dp-skills img.profile-image {
+		height: 200px;
+		width: 200px;
+	}
+	div.dp-skills .skills {
+		width: 85%;
+	}
+	div.right .portfolio .tags, div.right .about-me h2, div.right .ratings h2 {
+		position: unset;
+	} 
+	div.right .portfolio .cards {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0 30px;
+	}
+	div.right .portfolio .cards div.card .foot a svg { 
+		height: 25px;
+	}
+	.feedbacks {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0 20px;
+	}
+}
